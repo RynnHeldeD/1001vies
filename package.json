@@ -1,0 +1,9 @@
+{
+  "name": "1001vies",
+  "description": "Rynn's interviews project.",
+  "authors": "Dynodzzo & Rynn Helde'd",
+  "version": "1.0.0",
+  "dependencies": {
+    "bulma": "^0.3.1"
+  }
+}
