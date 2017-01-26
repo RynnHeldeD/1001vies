@@ -60,7 +60,7 @@ gulp.task('default', ['clean-app'], function() {
 });
 
 gulp.task('build', ['clean-lib', 'clean-app'], function() {
-	gulp.start('sass-lib', 'sass-app');
+	gulp.start('sass-lib', 'sass-app', 'font-awesome');
 });
 
 gulp.task('clean', function() {
