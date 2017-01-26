@@ -1,3 +1,10 @@
-nav {
-	width: 100%;
+.img-container {
+	overflow: hidden;
+	position: relative;
+
+	.img {
+		position: absolute;
+		width: 100%;
+		top: 0;
+	}
 }

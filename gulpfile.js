@@ -11,7 +11,7 @@ gulp.task('sass-lib', function() {
 	return gulp.src([
 			'node_modules/normalize.css/normalize.css',
 			'node_modules/bulma/css/bulma.css',
-			'node_modules/font-awesome/css/font-awesome.min.css'
+			'node_modules/font-awesome/css/font-awesome.css'
 		])
 		.pipe(concat('lib.css'))
 		.pipe(gulp.dest('dist/assets/css'))
@@ -32,6 +32,12 @@ gulp.task('sass-app', function() {
 		.pipe(notify({message: 'sass-app task complete!'}));
 });
 
+// FONTS
+gulp.task('font-awesome', function() {
+	return gulp.src('node_modules/font-awesome/fonts/*')
+		.pipe(gulp.dest('dist/assets/fonts/'));
+});
+
 
 // CLEANING
 gulp.task('clean-lib', function() {
@@ -49,7 +55,11 @@ gulp.task('clean-app', function() {
 });
 
 // BUILDS
-gulp.task('default', ['clean-lib', 'clean-app'], function() {
+gulp.task('default', ['clean-app'], function() {
+	gulp.start('sass-app');
+});
+
+gulp.task('build', ['clean-lib', 'clean-app'], function() {
 	gulp.start('sass-lib', 'sass-app');
 });
 
