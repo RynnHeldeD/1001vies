@@ -1,0 +1,20 @@
+$slick-font-path: "../fonts/";
+
+.slide-image {
+	position: absolute;
+	width: 25%;
+}
+
+// Slick styling
+.slick-dots {
+	bottom: 25px;
+}
+
+.slick-dotted.slick-slider {
+	margin-bottom: 0;
+}
+
+.slick-dots li button:before {
+	font-size: 20px;
+    line-height: 20px;
+}
